@@ -25,6 +25,36 @@
   background: #000;
 }
 
+.reel-loader {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: rgba(0, 0, 0, 0.72);
+  color: #fff;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.reel-spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid rgba(255, 255, 255, 0.24);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .reel-video {
   position: absolute;
   inset: 0;
@@ -106,7 +136,9 @@
   font-size: 0.96rem;
   text-decoration: none;
   box-shadow: 0 14px 38px rgba(15, 76, 44, 0.24);
-  transition: transform 180ms ease, background 180ms ease;
+  transition:
+    transform 180ms ease,
+    background 180ms ease;
 }
 
 .reel-button:hover,
